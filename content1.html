@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+	<style type="text/css">
+		h1{
+			text-align: center;
+			font-size: 60px;
+			line-height: 150px;
+			font-family: myFirstFont2;
+		}
+		p{
+			text-indent: 2em;
+			font-size: 30px;
+			line-height: 50px;
+		}
+		.imgBac{
+			width: 100%;
+			z-index: -1;
+			position: fixed;
+			filter: blur(10px);
+		}
+		.container{
+			width: 80%;
+			margin: 0 auto;
+		}
+		a{
+			display: block;
+			text-align: center;
+			width: 300px;
+			height: 70px;
+			font-size: 50px;
+			line-height: 70px;
+			margin:  100px auto;
+			text-decoration: none;
+			color: #fff;
+			border: 5px solid #fff;
+			position: relative;
+		}
+		body{
+			font-family: myFirstFont;
+			
+		}
+		@font-face{
+			font-family: 'myFirstFont';
+			src: url('font/【Aunt补】紫荆体.ttf');
+		}
+		@font-face{
+			font-family: 'myFirstFont2';
+			src: url('font/腾祥铁山楷书简.ttf');
+		}
+		#right{
+			position: absolute;
+			right: 45px;
+		}
+		a:hover{
+			color: #000;
+			border: 5px solid #000;
+		}
+		.container .oPic{
+			width: 60%;
+			margin-left:20%;
+		}
+	</style>
+</head>
+<body>
+	<img class="imgBac" src="img/banner1.png"/>
+	<div class="container">
+		<h1>冰雪之都---冰雪大世界</h1>
+		<p>
+		哈尔滨冰雪大世界始创于1999年，向世人展示了北方名城哈尔滨冰雪文化和冰雪旅游的独特魅力。当今世界规模最大、冰雪艺术景观最多、冰雪娱乐项目最全、夜晚景色最美、活动最精彩的“冰雪迪斯尼乐园”。
+	 	</p>
+	 	<img class="oPic" src="img/1-1.png"/>
+	 	<p style="text-align: center;">
+		每年都有数以百万计的游客前来参观
+	 	</p>
+	 	<img class="oPic" src="img/1-2.png"/>
+	 	<p>
+		第十四届冰雪大世界设有大型冰雪景观展示、冰雪活动、实景演出、花车巡游、歌舞表演、互动游戏、焰火燃放、现代3维立体灯光演示、旅游购物、特色餐饮等一系列室内外活动有机地组合在一起，通过完善园区各项功能，合理规划项目，建设一座综合性的冰雪游乐园。
+	 	</p>
+	 	<img class="oPic" src="img/1-3.png"/>
+	 	<p>
+		冰雕艺术是哈尔滨最具特色的明信片之一，工匠师傅将取自松花江上数万吨的冰块雕刻的栩栩如生
+	 	</p>
+	 	<img class="oPic" src="img/1-4.png"/>
+	 	<p>
+		冰雪大世界每年的冰雕都是不同的，所以每次去都是可以观赏到不同的冰雕，看冰雪艺术非北国哈尔滨莫属！来体验一场冰雪盛宴吧！
+	 	</p>
+	 	<img class="oPic" src="img/1-5.png"/>
+	 	<p style="text-align: center;">
+		松花江上的夕阳与微笑
+	 	</p>
+	 	<img class="oPic" src="img/1-6.png"/>
+	 	<img class="oPic" src="img/1-7.png"/>
+	 	<p>
+		没游览过松花江的哈尔滨之旅是不完整的。夏日傍晚沿着江堤散步似乎成了许多哈尔滨人的一种习惯。有条件也可以换个角度欣赏——坐索道俯瞰，或乘游船近距离接触松花江。等冬天江面完全封冻的时候，这里又成了欢乐的海洋，各种冰上活动荟萃一堂。南方的孩子一定要好好在江面上走一回，才不枉来一趟真正的北方.
+	 	</p>
+	 	<a id="select" onmouseenter="come()" onmouseout="go()" class="btn" href="index.html">返回<span id="right">→</span> </a>
+	</div>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		function come(){
+			$("#right").stop(true)
+			.animate({
+				right:"20px"},"normal")
+		}
+		function go(){
+			$("#right").stop(true)
+			.animate({
+				right:"45px"},"normal")
+		}
+	</script>
+</body>
+</html>

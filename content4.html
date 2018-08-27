@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+	<style type="text/css">
+		h1{
+			text-align: center;
+			font-size: 60px;
+			line-height: 80px;
+			font-family: myFirstFont2;
+		}
+		h2{
+			text-align: center;
+			font-size: 40px;
+			line-height: 120px;
+			font-family: myFirstFont2;
+		}
+		p{
+			text-indent: 2em;
+			font-size: 30px;
+			line-height: 50px;
+		}
+		.imgBac{
+			width: 100%;
+			z-index: -1;
+			position: fixed;
+			filter: blur(10px);
+		}
+		.container{
+			width: 80%;
+			margin: 0 auto;
+		}
+		a{
+			display: block;
+			text-align: center;
+			width: 300px;
+			height: 70px;
+			font-size: 50px;
+			line-height: 70px;
+			margin:  100px auto;
+			text-decoration: none;
+			color: #fff;
+			border: 5px solid #fff;
+			position: relative;
+		}
+		body{
+			font-family: myFirstFont;
+			
+		}
+		@font-face{
+			font-family: 'myFirstFont';
+			src: url('font/【Aunt补】紫荆体.ttf');
+		}
+		@font-face{
+			font-family: 'myFirstFont2';
+			src: url('font/腾祥铁山楷书简.ttf');
+		}
+		#right{
+			position: absolute;
+			right: 45px;
+		}
+		a:hover{
+			color: #000;
+			border: 5px solid #000;
+		}
+		.container .oPic{
+			width: 60%;
+			margin-left:20%;
+		}
+	</style>
+</head>
+<body>
+	<img class="imgBac" src="img/banner4.png"/>
+	<div class="container">
+		<h1>文化之都</h1>
+		
+		<h2>哈尔滨工业大学</h2>
+	 	<img class="oPic" src="img/4-1.png"/>
+	 	<img class="oPic" src="img/4-2.png"/>
+	 	<p>机器人研究所成立于1986年，是国内最早开展机器人技术方面的研究单位之一。自1986年研制成功我国第一台点焊机器人以来，研究所得到了快速发展，设有国家"863"计划智能机器人机构研究网点开放实验室。这里是世界顶级机器人的学府！	 	</p>
+		<img style="margin-bottom: 50px;" class="oPic" src="img/4-3.png"/>
+	 	
+	 	<h2>风情俄式建筑</h2>
+	 	<img class="oPic" src="img/4-4.png"/>
+	 	<p style="text-align: center;">圣索菲亚大教堂是哈尔滨最具风情的建筑之一</p>
+	 	<img class="oPic" src="img/4-5.png"/>
+	 	<p style="margin-bottom: 50px;">哈尔滨圣索菲亚大教堂是哈尔滨市十七座教堂中规模较大和较早建成的一座，是远东地区最大的东正教堂。是原俄国远东地区现存最大的东正教堂，通高53.35米，占地面积721平方米，是拜占庭式建筑的典型代表。整座教为庭式建筑，中央一座主体建筑有个标准的大穹窿，红碑结构，巍峨宽敞。</p>
+	 	
+	 	<h2>俄罗斯套娃</h2>
+	 	<img class="oPic" src="img/4-6.png"/>
+	 	<p style="margin-bottom: 50px;">乡的表妹，每年续做木娃娃，一年比一年做的娃娃大。数年后，见到表妹就将一排木娃娃送给表妹以表达思念之情，后人模仿传称套娃，又叫吉祥娃娃。</p>
+	 	
+	 	
+	 	
+	 	
+	 	
+	 	<a id="select" onmouseenter="come()" onmouseout="go()" class="btn" href="index.html">返回<span id="right">→</span> </a>
+	</div>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		function come(){
+			$("#right").stop(true)
+			.animate({
+				right:"20px"},"normal")
+		}
+		function go(){
+			$("#right").stop(true)
+			.animate({
+				right:"45px"},"normal")
+		}
+	</script>
+</body>
+</html>

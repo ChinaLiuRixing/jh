@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+	<style type="text/css">
+		h1{
+			text-align: center;
+			font-size: 60px;
+			line-height: 80px;
+			font-family: myFirstFont2;
+		}
+		h2{
+			text-align: center;
+			font-size: 40px;
+			line-height: 120px;
+			font-family: myFirstFont2;
+		}
+		p{
+			text-indent: 2em;
+			font-size: 30px;
+			line-height: 50px;
+		}
+		.imgBac{
+			width: 100%;
+			z-index: -1;
+			position: fixed;
+			filter: blur(10px);
+		}
+		.container{
+			width: 80%;
+			margin: 0 auto;
+		}
+		a{
+			display: block;
+			text-align: center;
+			width: 300px;
+			height: 70px;
+			font-size: 50px;
+			line-height: 70px;
+			margin:  100px auto;
+			text-decoration: none;
+			color: #fff;
+			border: 5px solid #fff;
+			position: relative;
+		}
+		body{
+			font-family: myFirstFont;
+			
+		}
+		@font-face{
+			font-family: 'myFirstFont';
+			src: url('font/【Aunt补】紫荆体.ttf');
+		}
+		@font-face{
+			font-family: 'myFirstFont2';
+			src: url('font/腾祥铁山楷书简.ttf');
+		}
+		#right{
+			position: absolute;
+			right: 45px;
+		}
+		a:hover{
+			color: #000;
+			border: 5px solid #000;
+		}
+		.container .oPic{
+			width: 60%;
+			margin-left:20%;
+		}
+	</style>
+</head>
+<body>
+	<img class="imgBac" src="img/banner3.png"/>
+	<div class="container">
+		<h1>冬奥之都</h1>
+		
+		<h2>短道速滑</h2>
+	 	<img class="oPic" src="img/3-1.png"/>
+	 	<p>
+作为平昌冬奥会男子500米冠军得主，世界第一人，武大靖的冰雪精神一直激励着哈尔滨人。	 	</p>
+		<img class="oPic" src="img/3-2.png"/>
+	 	<p style="margin-bottom: 50px;">
+松花江上，滑冰运动场上，无时无刻都能看到进行冰雪运动的人，冰雪运动已经经成为哈尔滨人必不可少的生活的一部分。	 	</p>
+	 	<h2>滑雪</h2>
+	 	<img class="oPic" src="img/3-3.png"/>
+	 	<p>
+2022年北京张家口冬奥运，这是真正在家门口举行的东奥赛事，我们国家带动三亿人参加冰雪项目的目标终会实现的，全民滑雪已成为一种风尚！	 	</p>
+		<img  style="margin-bottom: 50px;" class="oPic" src="img/3-4.png"/>
+	 	<h2>冰壶</h2>
+	 	<img class="oPic" src="img/3-5.png"/>
+	 	<p style="margin-bottom: 50px;">
+来奥运健儿的家乡体验不一样的冬运精神，来东北，让我们一起体验银装素裹的冬日，体验热情澎湃的冬运！	 	</p>
+	 	
+	 	
+	 	
+	 	
+	 	
+	 	<a id="select" onmouseenter="come()" onmouseout="go()" class="btn" href="index.html">返回<span id="right">→</span> </a>
+	</div>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		function come(){
+			$("#right").stop(true)
+			.animate({
+				right:"20px"},"normal")
+		}
+		function go(){
+			$("#right").stop(true)
+			.animate({
+				right:"45px"},"normal")
+		}
+	</script>
+</body>
+</html>

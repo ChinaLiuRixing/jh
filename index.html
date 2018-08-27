@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	
+	<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<style type="text/css">
+		.carousel-inner .item img{
+			width: 50%;
+			margin: 0 auto;
+		}
+		.carousel-inner .item{
+			/*z-index: 999;*/
+		}
+		.container{
+			/*margin-top: 100px;*/
+			width: 90%;
+			/*background: red;*/
+		}
+		.container .left{
+			/*background: green;*/
+		}
+		.container .right{
+			/*background: pink;*/
+		}
+		.container .left ul li{
+			list-style: none;
+			margin: 10px 0;
+		}
+		.container .left ul li a{
+			color: #fff;
+			width: 200px;
+			height: 80px;
+			line-height: 80px;
+			text-align: center;
+		}
+		#myCarousel{
+			margin-top: 30px;
+		}
+		#myCarousel img{
+			width: 800px;
+			/*border-radius: 50%;*/
+			overflow: hidden;
+			z-index: 1;
+		}
+		.circle{
+			border-radius: 50%;
+		}
+		.bac{
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			position: absolute;
+			-webkit-filter: blur(10px); /* Chrome, Opera */
+       		-moz-filter: blur(10px);
+        	-ms-filter: blur(10px);    
+            filter: blur(10px);    
+		}
+		.anniu{
+			width: 0;
+		}
+		
+		@font-face{
+			font-family: 'myFirstFont';
+			src: url('font/【Aunt补】紫荆体.ttf');
+		}
+		@font-face{
+			font-family: 'myFirstFonts';
+			src: url('font/腾祥铁山楷书简.ttf');
+		}
+		
+		.home{
+			font-size: 50px;
+			font-family:myFirstFonts;
+			text-align: center;
+			height: 150px;
+			line-height: 150px;
+			color: #000;
+			
+		}
+		a{
+			font-family:myFirstFont;
+			font-size: 50px;
+			text-align: center;
+			width: 100%;
+		}
+		a:hover{
+			text-decoration: none;
+		}
+		.Aacitve{
+			color: #000 !important;
+			/*background: #fff;*/
+		}
+		#dad li{
+			/*background: red;*/
+			text-align: center;
+			position: relative;
+			border: 1px solid #ccc;
+			border-radius: 15px;
+		}
+		#dad li .line{
+			background: -webkit-linear-gradient(#888, #fff); /* Safari 5.1 - 6.0 */
+			background: -o-linear-gradient(#888, #fff); /* Opera 11.1 - 12.0 */
+			background: -moz-linear-gradient(#888, #fff); /* Firefox 3.6 - 15 */
+			background: linear-gradient(#888, #fff); /* 标准的语法 */
+			position: absolute;
+			z-index: 999;
+		}
+		#dad li .line-heng{
+			background: -webkit-linear-gradient(left, #888 , #fff); /* Safari 5.1 - 6.0 */
+			background: -o-linear-gradient(right, #888, #fff); /* Opera 11.1 - 12.0 */
+			background: -moz-linear-gradient(right, #888, #fff); /* Firefox 3.6 - 15 */
+			background: linear-gradient(to right, #888 , #fff); /* 标准的语法 */
+			position: absolute;
+			z-index: 999;
+		}
+		
+		#dad li .line-left{
+			/*height: 90px;*/
+			height: 0px;
+			width: 5px;
+			left: -10px;
+			top: 0;
+		}
+		#dad li .line-right{
+			/*height: 90px;*/
+			height: 0px;
+			width: 5px;
+			right: -10px;
+			bottom: -10px;
+		}
+		#dad li .line-top{
+			height: 5px;
+			/*width: 278px;*/
+			width: 0px;
+			left: -10px;
+			top: -10px;
+		}
+		#dad li .line-bottom{
+			height: 5px;
+			/*width: 278px;*/
+			width: 0px;
+			right: -100px;
+			bottom: -10px;
+		}
+		body{
+			overflow: hidden;
+		}
+		
+		
+		/*snow*/
+		
+			
+			@keyframes mysnow {
+				0% {
+					bottom: 100%;
+					opacity: 0;
+				}
+				50% {
+					opacity: 1;
+					transform: rotate(720deg);
+				}
+				100% {
+					transform: rotate(0deg);
+					opacity: 0;
+					bottom: 0%;
+				}
+			}
+			
+			.container-snow {
+				position: fixed;
+				z-index: 1000;
+			}
+			
+			.container-snow .pic {
+				position: absolute;
+				opacity: 0;
+				animation: mysnow 5s;
+				height: 50px;
+			}
+			
+			.container .title{
+				height: 150px;
+				/*background: red;*/
+			}
+			.container .title{
+				
+			}
+	</style>
+	
+</head>
+<body>
+	<div id="snowFlow"></div>
+	<img class="bac" src="https://goss.vcg.com/html/images/psimg/creativeSub/worldcup1-1.jpg"/>
+	<div class="container">
+		<div class="title col-md-12">
+			<p class="home" style="font: myFirstFonts;">隽秀北国---哈尔滨</p>
+		</div>
+		<div class="left col-md-3">
+			<ul id="dad">
+				<li>
+					<a  onmouseenter="come()" onmouseleave="go()" href="content1.html">冰雪之都</a>
+					<div class="line line-left"></div>
+					<div class="line line-right"></div>
+					<div class="line-heng line-top"></div>
+					<div class="line-heng line-bottom"></div>
+				</li>
+				<li>
+					<a  onmouseenter="come()" onmouseleave="go()" href="content2.html">美食之都</a>
+					<div class="line line-left"></div>
+					<div class="line line-right"></div>
+					<div class="line-heng line-top"></div>
+					<div class="line-heng line-bottom"></div>
+				</li>
+				<li>
+					<a  onmouseenter="come()" onmouseleave="go()" href="content3.html">冬奥之都</a>
+					<div class="line line-left"></div>
+					<div class="line line-right"></div>
+					<div class="line-heng line-top"></div>
+					<div class="line-heng line-bottom"></div>
+				</li>
+				<li>
+					<a  onmouseenter="come()" onmouseleave="go()" href="content4.html">文化之都</a>
+					<div class="line line-left"></div>
+					<div class="line line-right"></div>
+					<div class="line-heng line-top"></div>
+					<div class="line-heng line-bottom"></div>
+				</li>
+				<li>
+					<a  onmouseenter="come()" onmouseleave="go()" href="content5.html">清凉之都</a>
+					<div class="line line-left"></div>
+					<div class="line line-right"></div>
+					<div class="line-heng line-top"></div>
+					<div class="line-heng line-bottom"></div>
+				</li>
+				
+			</ul>
+		</div>
+		<!--<div class="col-md-1">
+			<p class="home" style="font: myFirstFont;">我的家乡</p>
+		</div>-->
+		<div class="right col-md-offset-1 col-md-8">
+			<!--<h1 id="codes" style="text-align: center;font-size: 40px;line-height: 50px;">我的家乡</h1>-->
+
+			<!--轮播图-->
+			<div id="myCarousel" class="carousel slide ">
+			    <ol class="carousel-indicators">
+			        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			        <li data-target="#myCarousel" data-slide-to="1"></li>
+			        <li data-target="#myCarousel" data-slide-to="2"></li>
+			        <li data-target="#myCarousel" data-slide-to="3"></li>
+			        <li data-target="#myCarousel" data-slide-to="4"></li>
+			    </ol>   
+			    <div class="carousel-inner ">
+			        <div class="item active">
+			            <img src="img/banner2.png" alt="First slide">
+			        </div>
+			        <div class="item">
+			            <img src="img/banner1.png" alt="Second slide">
+			        </div>
+			        <div class="item">
+			            <img src="img/banner3.png" alt="Second slide">
+			        </div>
+			        <div class="item">
+			            <img src="img/banner4.png" alt="Second slide">
+			        </div>
+			        <div class="item">
+			            <img src="img/banner5.png" alt="Second slide">
+			        </div>
+			    </div>
+			    <a class="carousel-control left anniu" href="#myCarousel" 
+			       data-slide="prev"> <span _ngcontent-c3="" aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span></a>
+			    <a class="carousel-control right anniu" href="#myCarousel" 
+			       data-slide="next"><span _ngcontent-c3="" aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></a>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function come(event){
+			//获取触发当前事件的元素
+			event = event ? event : window.event;   
+			var obj = event.srcElement ? event.srcElement : event.target;   
+			var $obj = $(obj);  
+			$obj.addClass("Aacitve");
+//			$obj.next()//left
+//			$obj.next().next()//right
+//			$obj.next().next().next()//top
+//			$obj.next().next().next().next()//bottom
+			$obj.next().stop(true)
+			.animate({
+				height:"20px"},"normal")
+			.animate({
+				top:"1000px"},"fast")
+			.animate({
+				height:"0px"},"normal");
+				
+			$obj.next().next().stop(true)
+			.animate({
+				height:"20px"},"normal")
+			.animate({
+				bottom:"1000px"},"fast")
+			.animate({
+				height:"0px"},"normal")
+			
+			$obj.next().next().next().stop(true)
+			.animate({
+				width:"40px"},"normal")
+			.animate({
+				left:"-1000px"},"fast")
+			.animate({
+				width:"0px"},"normal")
+			
+			$obj.next().next().next().next().stop(true)
+			.animate({
+				width:"40px"},"normal")
+			.animate({
+				right:"-1000px"},"fast")
+			.animate({
+				width:"0px"},"normal")
+			
+		}
+		function go(){
+			event = event ? event : window.event;   
+			var obj = event.srcElement ? event.srcElement : event.target;   
+			var $obj = $(obj); 
+			$obj.removeClass("Aacitve");
+			
+			$obj.next().stop(true)
+			.animate({
+				height:"20px"},"normal")
+			.animate({
+				top:"0px"},"fast")
+			.animate({
+				height:"0px"},"normal")
+			
+			$obj.next().next().stop(true)
+			.animate({
+				height:"20px"},"normal")
+			.animate({
+				bottom:"0px"},"fast")
+			.animate({
+				height:"0px"},"normal")
+			
+			$obj.next().next().next().stop(true)
+			.animate({
+				width:"40px"},"normal")
+			.animate({
+				left:"0px"},"fast")
+			.animate({
+				width:"0px"},"normal")
+			
+			$obj.next().next().next().next().stop(true)
+			.animate({
+				width:"40px"},"normal")
+			.animate({
+				right:"0px"},"fast")
+			.animate({
+				width:"0px"},"normal")
+		}
+		window.onload = function() {
+				// snowFlow();
+				function snowFlow(left, height, src) {
+					var container = document.createElement('div');
+					var pic = document.createElement('img');
+					var snowFlow = document.getElementById('snowFlow');
+					pic.className = 'pic';
+					container.className = 'container-snow';
+					snowFlow.appendChild(container);
+					container.appendChild(pic);
+					container.style.left = left + 'px';
+					container.style.height = height + 'px';
+					pic.src = src;
+					setTimeout(function() {
+						snowFlow.removeChild(container);
+					}, 5000);
+				}
+				setInterval(function() {
+					var left = Math.random() * window.innerWidth;
+					var height = Math.random() * window.innerHeight;
+					var src = 'img/snow.png';
+					snowFlow(left, height, src);
+				}, 500)
+			} 
+	</script>
+</body>
+</html>

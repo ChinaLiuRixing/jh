@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+	<style type="text/css">
+		h1{
+			text-align: center;
+			font-size: 60px;
+			line-height: 80px;
+			font-family: myFirstFont2;
+		}
+		h2{
+			text-align: center;
+			font-size: 40px;
+			line-height: 120px;
+			font-family: myFirstFont2;
+		}
+		p{
+			text-indent: 2em;
+			font-size: 30px;
+			line-height: 50px;
+		}
+		.imgBac{
+			width: 100%;
+			z-index: -1;
+			position: fixed;
+			filter: blur(10px);
+		}
+		.container{
+			width: 80%;
+			margin: 0 auto;
+		}
+		a{
+			display: block;
+			text-align: center;
+			width: 300px;
+			height: 70px;
+			font-size: 50px;
+			line-height: 70px;
+			margin:  100px auto;
+			text-decoration: none;
+			color: #fff;
+			border: 5px solid #fff;
+			position: relative;
+		}
+		body{
+			font-family: myFirstFont;
+			
+		}
+		@font-face{
+			font-family: 'myFirstFont';
+			src: url('font/【Aunt补】紫荆体.ttf');
+		}
+		@font-face{
+			font-family: 'myFirstFont2';
+			src: url('font/腾祥铁山楷书简.ttf');
+		}
+		#right{
+			position: absolute;
+			right: 45px;
+		}
+		a:hover{
+			color: #000;
+			border: 5px solid #000;
+		}
+		.container .oPic{
+			width: 60%;
+			margin-left:20%;
+		}
+	</style>
+</head>
+<body>
+	<img class="imgBac" src="img/banner4.png"/>
+	<div class="container">
+		<h1>清凉之都</h1>
+	 	<p style="margin-bottom: 50px;">如果说冬天的冰雪是哈尔滨的明信片，那么夏季的凉爽宜人就是哈尔滨重要的标签。哈尔滨市因依托原生态多样性的城市湿地资源、山林资源、亚热带气候资源和浓厚的欧陆风情资源，夏季凉爽舒适，使哈尔滨成为名副其实的避暑胜地。</p>
+		
+		
+		
+		
+		
+		
+		<h2>波塞冬海洋王国</h2>
+	 	<img class="oPic" src="img/5-1.png"/>
+	 	<img class="oPic" src="img/5-2.png"/>
+	 	<p style="margin-bottom: 50px;">波塞冬海洋王国是全球最大的室内沙滩水世界，主要由小美人鱼岛、海神冒险岛、海豚湾、波塞冬神殿、迷幻美杜莎五大区域组成。五大区域各具特色，包含充满奇幻色彩的爱琴海岸、北海空运精良海沙、亚洲最大的室内造浪池、首次出现在冰城的海豚、色香味俱佳的美食佳饮。</p>
+		
+		<h2>呼兰河口湿地公园</h2>
+	 	<img class="oPic" src="img/5-3.png"/>
+	 	<p style="margin-bottom: 50px;">呼兰河口湿地位于哈尔滨市区东北部，国家AAAAA级旅游景区。公园植被丰富，水天一色，素有“到呼兰河口湿地来看海”的美誉。</p>
+		
+		<h2>极地馆</h2>
+	 	<img class="oPic" src="img/5-4.png"/>
+	 	<p style="margin-bottom: 50px;">哈尔滨极地馆是世界首座极地演艺游乐园，哈尔滨国际冰雪节三大景区之一，国家4A级旅游景区，中国首家以极地动物娱乐表演为主题的极地馆。被全球最大旅游网站"Trip Advisor"评选为"全球杰出景区"</p>
+		
+	 	
+	 	
+	 	
+	 	
+	 	
+	 	<a id="select" onmouseenter="come()" onmouseout="go()" class="btn" href="index.html">返回<span id="right">→</span> </a>
+	</div>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		function come(){
+			$("#right").stop(true)
+			.animate({
+				right:"20px"},"normal")
+		}
+		function go(){
+			$("#right").stop(true)
+			.animate({
+				right:"45px"},"normal")
+		}
+	</script>
+</body>
+</html>

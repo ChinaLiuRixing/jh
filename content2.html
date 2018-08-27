@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+	<style type="text/css">
+		h1{
+			text-align: center;
+			font-size: 60px;
+			line-height: 80px;
+			font-family: myFirstFont2;
+		}
+		h2{
+			text-align: center;
+			font-size: 40px;
+			line-height: 120px;
+			font-family: myFirstFont2;
+		}
+		p{
+			text-indent: 2em;
+			font-size: 30px;
+			line-height: 50px;
+		}
+		.imgBac{
+			width: 100%;
+			z-index: -1;
+			position: fixed;
+			filter: blur(10px);
+		}
+		.container{
+			width: 80%;
+			margin: 0 auto;
+		}
+		a{
+			display: block;
+			text-align: center;
+			width: 300px;
+			height: 70px;
+			font-size: 50px;
+			line-height: 70px;
+			margin:  100px auto;
+			text-decoration: none;
+			color: #fff;
+			border: 5px solid #fff;
+			position: relative;
+		}
+		body{
+			font-family: myFirstFont;
+			
+		}
+		@font-face{
+			font-family: 'myFirstFont';
+			src: url('font/【Aunt补】紫荆体.ttf');
+		}
+		@font-face{
+			font-family: 'myFirstFont2';
+			src: url('font/腾祥铁山楷书简.ttf');
+		}
+		#right{
+			position: absolute;
+			right: 45px;
+		}
+		a:hover{
+			color: #000;
+			border: 5px solid #000;
+		}
+		.container .oPic{
+			width: 60%;
+			margin-left:20%;
+		}
+	</style>
+</head>
+<body>
+	<img class="imgBac" src="img/banner2.png"/>
+	<div class="container">
+		<h1>美食之都</h1>
+		
+		<h2>烧烤</h2>
+	 	<img class="oPic" src="img/2-1.png"/>
+	 	<p style="margin-bottom: 50px;">
+		在东北，没有什么事是一顿烧烤解决不了的，烧烤将当地的风土人情体现的淋漓尽致，豪爽与义气，来东北，来哈尔滨体验舌尖上的烧烤。
+	 	</p>
+	 	<h2>锅包肉</h2>
+	 	<img class="oPic" src="img/2-2.png"/>
+	 	<p style="margin-bottom: 50px;">
+		谈到正宗的哈尔滨菜肴，岂能错过锅包肉。其实它原本叫“锅爆肉”，因俄罗斯人常把“爆”说成“包”，久而久之便成了“锅包肉”。刚炒好的锅包肉色泽金黄，吃起来外酥里嫩、酸甜可口，是许多游客最难忘的一道哈尔滨美食。
+	 	</p>
+	 	<h2>酱骨</h2>
+	 	<img class="oPic" src="img/2-3.png"/>
+	 	<p style="margin-bottom: 50px;">
+		酱骨是哈尔滨传统的消夏菜肴，不过现在什么季节都能吃到。分为酱骨架和酱骨棒两种。喜欢吃肉的朋友选酱骨架准没错，想品尝骨髓就吃酱骨棒。最地道的吃法是配上啤酒和花生，谈笑间体会一把哈尔滨人的豪爽
+	 	</p>
+	 	<h2>罐虾</h2>
+	 	<img class="oPic" src="img/2-4.png"/>
+	 	<p style="margin-bottom: 50px;">
+		罐虾是一道俄罗斯系的菜肴，与红菜汤一样以西红柿做底料，再加上芹菜、胡萝卜等配料焖制成一罐浓郁虾肉。除了罐虾，还有罐牛、罐羊等，都是相同手法烹饪而成的。
+	 	</p>
+	 	<h2>马迭尔冰棍</h2>
+	 	<img class="oPic" src="img/2-5.png"/>
+	 	<p style="margin-bottom: 50px;">
+	 		来哈尔滨一定要尝尝马迭尔冰棍，它入口即化、甜而不腻，坚持使用传统工艺制作。也许正是因为百年来味道始终如一，使得它积累了颇高的人气。
+	 	</p>
+	 	<h2>格瓦斯</h2>
+	 	<img class="oPic" src="img/2-6.png"/>
+	 	<p style="margin-bottom: 50px;">
+	 		格瓦斯是一种盛行于俄罗斯、乌克兰等东欧国家的饮料，已有一千多年的历史，格瓦斯由面包发酵酿制而成，颜色近似啤酒，是很受大众欢迎的发酵饮料。
+	 	</p>
+	 	<h2>秋林里道斯（哈红肠）</h2>
+	 	<img class="oPic" src="img/2-7.png"/>
+	 	<p style="margin-bottom: 50px;">
+	 		哈尔滨红肠，原产于东欧的立陶宛。中东铁路修建后，外国人大量进入哈尔滨，也将红肠工艺带到了哈尔滨。因为肠的外表呈枣红色，所以被哈尔滨人称之为红肠。香辣糯嫩，鲜美可口。
+	 	</p>
+	 	
+	 	
+	 	
+	 	<a id="select" onmouseenter="come()" onmouseout="go()" class="btn" href="index.html">返回<span id="right">→</span> </a>
+	</div>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		function come(){
+			$("#right").stop(true)
+			.animate({
+				right:"20px"},"normal")
+		}
+		function go(){
+			$("#right").stop(true)
+			.animate({
+				right:"45px"},"normal")
+		}
+	</script>
+</body>
+</html>
